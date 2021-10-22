@@ -84,7 +84,7 @@ This API was made using [AirTable](https://airtable.com/). The following is the 
 |  Day | Deliverable | Status
 |---|---|---|
 |Thu Oct 21| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|Fri Oct 22| Prject Approval | Incomplete
+|Fri Oct 22| Prject Approval | Complete
 |Sat Oct 23| Boilerplate react / Create API | Incomplete
 |Sun Oct 24| | |
 |Mon Oct 25| GET / POST / Styling | Incomplete
