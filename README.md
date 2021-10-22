@@ -20,7 +20,7 @@ Are you an artist that wants to share upcoming performance dates? Post your gig 
 
 ## Component Hierarchy
 
-![image](https://user-images.githubusercontent.com/89525025/138506232-9224b485-1b3d-4ada-a7dd-98150a36f480.png)
+![image](https://user-images.githubusercontent.com/89525025/138526534-c713b17e-cb47-4289-9bf3-61353c24cc17.png)
 
 
 ## API and Data Sample
