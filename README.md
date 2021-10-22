@@ -6,97 +6,63 @@
 
 ## Wireframes
 
+![image](https://user-images.githubusercontent.com/89525025/138503219-17f7ef2a-8f79-400a-b845-aa07b8039025.png)
+
+
 ## Component Hierarchy
-Show your component hierarchy here! Use [this](https://cms-assets.tutsplus.com/uploads/users/1795/posts/30352/image/GettingStartedWithReduxTutorial-React-Component-Structure.png) as an example.
+
+![image](https://user-images.githubusercontent.com/89525025/138506232-9224b485-1b3d-4ada-a7dd-98150a36f480.png)
+
 
 ## API and Data Sample
 
-Show us a snippet of JSON returned by your Airtable (you can find it under the API documentation) so we know you can access it and get the info you need. This __must__ be properly formatted. An example is below:
-
-```json
-{
-    "records": [
-        {
-            "id": "recONRzIUTuZ5lXaF",
-            "fields": {
-                "author": "Liz Yrineo",
-                "setup": "Why did the tomato turn red?",
-                "punchline": "Because it saw the salad dressing!"
-            },
-            "createdTime": "2020-11-30T16:03:09.000Z"
-        },
-        {
-            "id": "rec3oYZ5Tp0AIDsKe",
-            "fields": {
-                "author": "Rachel Moskowitz",
-                "setup": "What did the green grape say to the red grape?",
-                "punchline": "Breathe, idiot, breathe!"
-            },
-            "createdTime": "2020-11-30T16:03:09.000Z"
-        },
-        {
-            "id": "recA34tOaoE1IVeC1",
-            "fields": {
-                "author": "Gary Grant",
-                "setup": "How do you make holy water?",
-                "punchline": "You boil the hell out of it!"
-            },
-            "createdTime": "2020-11-30T16:03:09.000Z"
-        }
-    ],
-    "offset": "recA34tOaoE1IVeC1"
-}
-```
-
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MVP and PostMVP.  Carefully decide what is placed into your MVP, as the client will expect this functionality to be implemented upon project completion.  
-
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- [ ] Utilize React Router, installed via npm
+- [ ] Have at least 6 separate, rendered components
+- [ ] Use Axios to consume data from Airtable, and GET/render that data in your components
+- [ ] Use "Mobile First" principles to dynamically style web app
+- [ ] Use Axios to POST/create new data on Airtable
+- [ ] Use only React for DOM Manipulation
+- [ ] Display gigs after search (based on location, date, and artist)
+- [ ] Post gigs using a form
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
 
-- Add second API
-- Use local storage to save user favorites
+- [ ] Utilize the Google Maps API to display gigs geographically
+- [ ] Add ability to anonymously "like" gigs (ex. "I'll be there!" +1)
+- [ ] Display gigs based on "likes"
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations. Here's an example.
-
 |  Day | Deliverable | Status
-|---|---| ---|
-|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|July 13| Project Approval | Incomplete
-|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|July 14| Pseudocode / actual code | Incomplete
-|July 15| Initial Clickable Model  | Incomplete
-|July 16| MVP | Incomplete
-|July 17| Presentations | Incomplete
+|---|---|---|
+|Thu Oct 21| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|Fri Oct 22| Prject Approval | Incomplete
+|Sat Oct 23| Boilerplate react / Create API | Incomplete
+|Mon Oct 25| GET / POST / Styling | Incomplete
+|Tue Oct 26| Styling | Incomplete
+|Wed Oct 27| MVP complete / Google Maps PMVP | Incomplete
+|Thu Oct 28| Likes PMVP | Incomplete
+|Fri Oct 29| Present | Incomplete
 
-## Timeframes
-
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all parts of your app.  Your estimates can then be used to evalute possibilities based on time needed and the actual time you have before the app must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add an additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
 
 ## SWOT Analysis
 
 ### Strengths:
 
+Organization and functionality (making the code look good)
+
 ### Weaknesses:
+
+CSS/Styling
 
 ### Opportunities:
 
+I am looking forward to challenging myself with the "likes" functionality as well as the styling.
+
 ### Threats:
+
+Getting too disorganized and inefficient within the CSS
