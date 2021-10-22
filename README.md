@@ -1,8 +1,10 @@
-# Project Overview
-
 ## Sing Song
 
-## Project Description
+### Project Description:
+
+Sing Song is a posting board that connects music lovers with local artists and performers. 
+Are you wanting to listen to live music? Search the site for gigs that are happening around you! 
+Are you an artist that wants to share upcoming performance dates? Post your gig on Sing Song to let people know you are performing!
 
 ## Wireframes
 
