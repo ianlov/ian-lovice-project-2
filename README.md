@@ -42,6 +42,7 @@
 |Thu Oct 21| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Fri Oct 22| Prject Approval | Incomplete
 |Sat Oct 23| Boilerplate react / Create API | Incomplete
+|Sun Oct 24| | |
 |Mon Oct 25| GET / POST / Styling | Incomplete
 |Tue Oct 26| Styling | Incomplete
 |Wed Oct 27| MVP complete / Google Maps PMVP | Incomplete
