@@ -8,7 +8,14 @@ Are you an artist that wants to share upcoming performance dates? Post your gig 
 
 ## Wireframes
 
+### Mobile
+
 ![image](https://user-images.githubusercontent.com/89525025/138503219-17f7ef2a-8f79-400a-b845-aa07b8039025.png)
+
+
+### Desktop
+
+![image](https://user-images.githubusercontent.com/89525025/138525884-e81316f6-e7df-4589-a94b-bc96345fa1d7.png)
 
 
 ## Component Hierarchy
