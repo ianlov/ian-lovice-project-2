@@ -18,6 +18,48 @@ Are you an artist that wants to share upcoming performance dates? Post your gig 
 
 ## API and Data Sample
 
+This API was made using [AirTable](https://airtable.com/). The following is the reponse from a GET request populated with three fictional gigs.
+
+```
+{
+    "records": [
+        {
+            "id": "rechD8z6kribLDFop",
+            "fields": {
+                "address": "3201 N Davidson St ste b, Charlotte, NC 28205",
+                "artist": "Mouse Rat",
+                "date": "2021-10-29",
+                "time": "9:00 pm - till we stop",
+                "link": "https://open.spotify.com/artist/1wEhQnXaoQcWwWhiFYnIX1"
+            },
+            "createdTime": "2021-10-22T20:16:32.000Z"
+        },
+        {
+            "id": "recDWEGpv3Khn2LOK",
+            "fields": {
+                "address": "1908 East Blvd Charlotte, NC 28203",
+                "artist": "Spinal Tap",
+                "date": "2021-10-30",
+                "time": "8:30 pm - 11:30 pm",
+                "link": "https://open.spotify.com/artist/65X3sG8LVBQN5033RqB6qn"
+            },
+            "createdTime": "2021-10-22T20:24:57.000Z"
+        },
+        {
+            "id": "recHYp0B7eBTJmXLA",
+            "fields": {
+                "address": "1200 W Tyvola Rd Charlotte, NC 28217",
+                "artist": "Scrantonicity",
+                "date": "2021-10-29",
+                "time": "9:00 pm - midnight",
+                "link": "https://www.youtube.com/watch?v=YXHo1eJWlZI&ab_channel=NCTChicago"
+            },
+            "createdTime": "2021-10-22T20:31:05.000Z"
+        }
+    ]
+}
+```
+
 ### MVP/PostMVP
 
 #### MVP 
