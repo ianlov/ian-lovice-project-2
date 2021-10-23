@@ -6,6 +6,7 @@ const ShowGig = ({ gigs }) => {
       {gigs.map((gig) => (
         <Gig
           gig={gig}
+          key={gig.id}
         />
       ))}
     </div>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom"
 
 const Search = ({ toggleSearch, setToggleSearch }) => {
   const [artist, setArtist] = useState("");
@@ -35,7 +36,7 @@ const Search = ({ toggleSearch, setToggleSearch }) => {
       <br />
       <input id="search" type="text" placeholder="Artist, Date, City" onChange={handleSearch} />
       <br />
-      <input type="submit" />
+      <Link to="/gigs" ><input type="submit" /></Link>
     </form>
   )
 }
