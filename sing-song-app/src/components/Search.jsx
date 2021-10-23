@@ -1,14 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const Search = () => {
+const Search = ({ toggleSearch, setToggleSearch }) => {
   const [artist, setArtist] = useState("");
   const [date, setDate] = useState("");
   const [city, setCity] = useState("");
-  const [searchType, setSearchType] = useState("")
+  const [searchType, setSearchType] = useState("");
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    
+    setToggleSearch(!toggleSearch)
   }
 
   const handleSearch = (ev) => {
