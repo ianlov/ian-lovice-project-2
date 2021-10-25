@@ -1,15 +1,4 @@
 /* Body */
-
-body {
-  background-color: #e9d8a6;
-  font-family: 'Space Mono', monospace;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-}
-
 a {
   text-decoration: none;
 }
@@ -18,13 +7,26 @@ a:hover {
   text-decoration: underline;
 }
 
-input[type="text"], input[type="search"], input[type="date"] {
+body {
+  background-color: #e9d8a6;
   font-family: 'Space Mono', monospace;
-  border: 1px solid black;
+  color: #001219
 }
 
-Link {
-  color: #005f73;
+h1 {
+  margin: 0;
+  padding: 0;
+
+}
+
+input[type="text"], input[type="search"], input[type="date"] {
+  font-family: 'Space Mono', monospace;
+  border: 1px solid #001219;
+}
+
+main {
+  display: flex;
+  justify-content: center;
 }
 
 /* Nav */
@@ -32,8 +34,8 @@ Link {
 nav {
   background-color: #005f73;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  flex-flow: column nowrap;
+  justify-content: space-around;
   width: 100vw;
 }
 
@@ -42,6 +44,17 @@ nav a {
   text-decoration: none;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+/* Home */
+
+.title {
+  background-image: url(./images/performance.png);
+  background-size: cover;
+}
+
+.title h1 {
+  text-shadow: white;
 }
 
 /* Post Gig */
@@ -66,7 +79,7 @@ nav a {
   height: 35px;
   width: 35px;
   margin-top: 10px;
-  border: 1px solid black;
+  border: 1px solid #001219;
   background-color: #0a9396;
 }
 
@@ -91,7 +104,7 @@ nav a {
   height: 35px;
   width: 35px;
   margin-left: 10px;
-  border: 1px solid black;
+  border: 1px solid #001219;
   background-color: #0a9396;
 }
 
@@ -107,4 +120,28 @@ nav a {
   margin-bottom: 10px;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 575px) {
+  /* Nav */
+
+  nav {
+    flex-flow: row nowrap;
+  }
+
+  #link-home {
+    order: 0;
+  }
+
+  /* Home */
+
+  .title {
+    height: 30vh;
+  }
+
+  .title h1 {
+  }
 }
