@@ -2,7 +2,7 @@
 
 const Gig = ({ gig }) => {
   return (
-    <div>
+    <div className="gig" >
       <h4>{gig.fields.artist} in {gig.fields.city}</h4>
       <h5>{gig.fields.date}</h5>
       <h5>{gig.fields.time}</h5>

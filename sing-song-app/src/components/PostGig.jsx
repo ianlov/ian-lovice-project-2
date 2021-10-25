@@ -36,27 +36,29 @@ const PostGig = ({ toggleFetch, setToggleFetch}) => {
   }
   
   return (
-    <form onSubmit={handlePost} >
-      <label htmlFor="artist" >Artist/Band</label>
-      <input id="artist" type="text" onChange={(ev) => setPostArtist(ev.target.value)} />
+    <div className="post-form" >
+      <form onSubmit={handlePost} >
+        <label htmlFor="artist" >Artist/Band</label>
+        <input id="artist" type="text" onChange={(ev) => setPostArtist(ev.target.value)} />
 
-      <label htmlFor="city" >City</label>
-      <input id="city" type="text" onChange={(ev) => setPostCity(ev.target.value)} />
+        <label htmlFor="city" >City</label>
+        <input id="city" type="text" onChange={(ev) => setPostCity(ev.target.value)} />
 
-      <label htmlFor="address" >Address</label>
-      <input id="address" type="text" onChange={(ev) => setPostAddress(ev.target.value)} />
+        <label htmlFor="address" >Address</label>
+        <input id="address" type="text" onChange={(ev) => setPostAddress(ev.target.value)} />
 
-      <label htmlFor="date" >Date</label>
-      <input id="date" type="date" onChange={(ev) => setPostDate(ev.target.value)} />
+        <label htmlFor="date" >Date</label>
+        <input id="date" type="date" onChange={(ev) => setPostDate(ev.target.value)} />
 
-      <label htmlFor="time" >Time</label>
-      <input id="time" type="text" onChange={(ev) => setPostTime(ev.target.value)} />
+        <label htmlFor="time" >Time</label>
+        <input id="time" type="text" onChange={(ev) => setPostTime(ev.target.value)} />
 
-      <label htmlFor="link" >Spotify/Soundcloud Link</label>
-      <input id="link" type="text" onChange={(ev) => setPostLink(ev.target.value)} />
+        <label htmlFor="link" >Spotify/Soundcloud Link</label>
+        <input id="link" type="text" onChange={(ev) => setPostLink(ev.target.value)} />
 
-      <input type="submit" />
-    </form>
+        <button><span class="material-icons">post_add</span></button>
+      </form>
+    </div>
   )
 }
 

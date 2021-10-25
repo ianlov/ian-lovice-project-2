@@ -15,10 +15,7 @@ function App() {
 
   return (
     <div>
-      <nav>
-        <Nav />
-      </nav>
-
+      <Nav />
       <main>
         <Route path="/" exact >
           <Home />
@@ -42,10 +39,6 @@ function App() {
           <About />
         </Route>
       </main>
-
-      <footer>
-
-      </footer>
     </div>
   );
 }

@@ -23,10 +23,12 @@ const Search = ({ gigs, setSearchGigs }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} >
-      <input id="search" type="search" placeholder="artist, date, city..." onChange={(ev) => setSearch(ev.target.value)} />
-      <input type="submit" value="Search"/>
-    </form>
+    <div className="search-form" >
+      <form onSubmit={handleSubmit} >
+        <input id="search" type="search" placeholder="artist, date, city..." onChange={(ev) => setSearch(ev.target.value)} />
+        <button><span class="material-icons">search</span></button>
+      </form>
+    </div>
   )
 }
 

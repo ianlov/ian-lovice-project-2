@@ -1,27 +1,106 @@
 /* Body */
 
 body {
-  background-color: #eae2b7;
+  background-color: #e9d8a6;
   font-family: 'Space Mono', monospace;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input[type="text"], input[type="search"], input[type="date"] {
+  font-family: 'Space Mono', monospace;
+  border: 1px solid black;
 }
 
 /* Nav */
 
 nav {
-  background-color: #003049;
+  background-color: #005f73;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100vw;
 }
 
 nav a {
-  color: #fcbf49;
+  color: #ee9b00;
   text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* Post Gig */
 
-form {
-  width: 50vw;
+.post-form {
+  width: 75vw;
+  height: 350px;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15vh;
+  border: 3px solid #ca6702;
+}
+
+.post-form form {
   display: flex;
   flex-flow: column nowrap;
+}
+
+.post-form form button {
+  height: 35px;
+  width: 35px;
+  margin-top: 10px;
+  border: 1px solid black;
+  background-color: #0a9396;
+}
+
+/* Show Gig */
+
+/* Search */
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.search-form form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form form button {
+  height: 35px;
+  width: 35px;
+  margin-left: 10px;
+  border: 1px solid black;
+  background-color: #0a9396;
+}
+
+.search-form form input {
+  height: 35px;
+}
+
+/* Gig */
+
+.gig {
+  border: 3px solid #ca6702;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
