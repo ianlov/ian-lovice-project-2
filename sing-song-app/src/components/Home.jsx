@@ -1,27 +1,12 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
 
-import Search from "./Search.jsx";
-
-const API_KEY = "keyLH1D8HDodG0Om3";
-const API_URL = `https://api.airtable.com/v0/app6U7NfwIM8GmQ47/Table%201?api_key=${API_KEY}`
-
-const Home = ({ toggleFetch }) => {
-  const [gigs, setGigs] = useState([]);
-  
-
-  useEffect(() => {
-    const getGigData = async () => {
-      const resp = await axios.get(API_URL)
-      setGigs(resp.data.records)
-    }
-
-    getGigData();
-  }, [toggleFetch])
+const Home = ({ gigs }) => {
 
   return (
     <div>
-      <Search />
+      <h1>Introduction</h1>
+      <p>Vel praesentium similique qui ut labore laudantium. Ut aut similique quis in expedita iure sapiente eos. Fugiat rerum nam architecto perspiciatis quibusdam autem. Ea corporis laboriosam nam expedita atque beatae natus officiis. Suscipit vel modi porro non tempore corrupti ipsum nesciunt. Et laborum cumque numquam.</p>
+      <Link to="/gigs" >Search Gigs</Link>
     </div>
   )
 }

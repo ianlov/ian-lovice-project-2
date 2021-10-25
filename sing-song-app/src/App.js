@@ -7,10 +7,7 @@ import About from "./components/About.jsx";
 import Home from "./components/Home.jsx";
 import Nav from "./components/Nav.jsx";
 import PostGig from "./components/PostGig.jsx";
-import ShowGig from "./components/ShowGig.jsx"
-
-
-
+import ShowGig from "./components/ShowGig.jsx";
 
 
 function App() {
@@ -23,14 +20,8 @@ function App() {
       </nav>
 
       <main>
-        <Route path="/" exact>
-          <Home 
-            toggleFetch={toggleFetch}
-          />
-        </Route>
-
-        <Route path="/about" >
-          <About />
+        <Route path="/" exact >
+          <Home />
         </Route>
 
         <Route path="/post" >
@@ -40,10 +31,15 @@ function App() {
           />
         </Route>
 
-        <Route path="/gigs" >
+        <Route path="/gigs" exact >
           <ShowGig
-            gigs={gigs}
+            toggleFetch={toggleFetch}
+            setToggleFetch={setToggleFetch}
           />
+        </Route>
+
+        <Route path="/about" >
+          <About />
         </Route>
       </main>
 

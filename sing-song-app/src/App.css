@@ -1,0 +1,27 @@
+/* Body */
+
+body {
+  background-color: #eae2b7;
+  font-family: 'Space Mono', monospace;
+}
+
+/* Nav */
+
+nav {
+  background-color: #003049;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+nav a {
+  color: #fcbf49;
+  text-decoration: none;
+}
+
+/* Post Gig */
+
+form {
+  width: 50vw;
+  display: flex;
+  flex-flow: column nowrap;
+}

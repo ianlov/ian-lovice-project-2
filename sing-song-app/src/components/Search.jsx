@@ -1,42 +1,31 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom"
+import { useState } from "react";
 
-const Search = ({ toggleSearch, setToggleSearch }) => {
-  const [artist, setArtist] = useState("");
-  const [date, setDate] = useState("");
-  const [city, setCity] = useState("");
-  const [searchType, setSearchType] = useState("");
+const Search = ({ gigs, setSearchGigs }) => {
+  const [search, setSearch] = useState("");
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    setToggleSearch(!toggleSearch)
-  }
+    
+    const searchLowerCase = search.toLowerCase()
 
-  const handleSearch = (ev) => {
-    if (searchType === "artist") {
-      setArtist(ev.target.value)
-    } else if (searchType === "date") {
-      setDate(ev.target.value)
-    } else {
-      setCity(ev.target.value)
-    }
-  }
-
-  const clear = () => {
-    setArtist("");
-    setDate("");
-    setCity("");
+    const searchedGigs = gigs.filter(gig => {
+      if (
+        gig.fields.artist.toLowerCase().includes(searchLowerCase) ||
+        gig.fields.city.toLowerCase().includes(searchLowerCase) ||
+        gig.fields.date.toLowerCase().includes(searchLowerCase)
+      ) {
+        return gig
+      }
+    })
+  
+    setSearchGigs(searchedGigs)
+    console.log(searchedGigs)
   }
 
   return (
     <form onSubmit={handleSubmit} >
-      <button onClick={() => {clear(); setSearchType("artist")}} >Search Artists/Bands</button>
-      <button onClick={() => {clear(); setSearchType("date")}} >Search Date</button>
-      <button onClick={() => {clear(); setSearchType("city")}} >Search City</button>
-      <br />
-      <input id="search" type="text" placeholder="Artist, Date, City" onChange={handleSearch} />
-      <br />
-      <Link to="/gigs" ><input type="submit" /></Link>
+      <input id="search" type="search" placeholder="artist, date, city..." onChange={(ev) => setSearch(ev.target.value)} />
+      <input type="submit" value="Search"/>
     </form>
   )
 }
