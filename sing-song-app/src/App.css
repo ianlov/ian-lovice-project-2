@@ -23,6 +23,10 @@ input[type="text"], input[type="search"], input[type="date"] {
   border: 1px solid black;
 }
 
+Link {
+  color: #005f73;
+}
+
 /* Nav */
 
 nav {
