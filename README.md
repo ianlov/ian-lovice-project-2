@@ -71,14 +71,14 @@ This API was made using [AirTable](https://airtable.com/). The following is the 
 
 #### MVP 
 
-- [ ] Utilize React Router, installed via npm
-- [ ] Have at least 6 separate, rendered components
-- [ ] Use Axios to consume data from Airtable, and GET/render that data in your components
-- [ ] Use "Mobile First" principles to dynamically style web app
-- [ ] Use Axios to POST/create new data on Airtable
+- [x] Utilize React Router, installed via npm
+- [x] Have at least 6 separate, rendered components
+- [x] Use Axios to consume data from Airtable, and GET/render that data in your components
+- [x] Use Axios to POST/create new data on Airtable
 - [ ] Use only React for DOM Manipulation
-- [ ] Display gigs after search (based on location, date, and artist)
-- [ ] Post gigs using a form
+- [x] Use "Mobile First" principles to dynamically style web app
+- [x] Display gigs after search (based on location, date, and artist)
+- [x] Post gigs using a form
 
 #### PostMVP  
 
@@ -92,10 +92,10 @@ This API was made using [AirTable](https://airtable.com/). The following is the 
 |---|---|---|
 |Thu Oct 21| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Fri Oct 22| Prject Approval | Complete
-|Sat Oct 23| Boilerplate react / Create API | Incomplete
+|Sat Oct 23| Boilerplate react / Create API | Complete
 |Sun Oct 24| | |
-|Mon Oct 25| GET / POST / Styling | Incomplete
-|Tue Oct 26| Styling | Incomplete
+|Mon Oct 25| GET / POST / Styling | Complete
+|Tue Oct 26| Styling | Complete
 |Wed Oct 27| MVP complete / Google Maps PMVP | Incomplete
 |Thu Oct 28| Likes PMVP | Incomplete
 |Fri Oct 29| Present | Incomplete
