@@ -89,12 +89,20 @@ nav a {
 .post-form form button {
   height: 35px;
   width: 35px;
-  margin-top: 10px;
+  margin-top: 10px ;
   border: 1px solid #001219;
   background-color: #0a9396;
 }
 
 /* Show Gig */
+
+.map {
+  height: 40vh;
+  width: 100%;
+  background-color: #ae2012;
+  position: sticky;
+  top: 0;
+}
 
 /* Search */
 
@@ -103,13 +111,15 @@ nav a {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin: 10px auto;
+  width: 300px;
 }
 
 .search-form form {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 300px;
 }
 
 .search-form form button {
@@ -122,6 +132,7 @@ nav a {
 
 .search-form form input {
   height: 35px;
+  width: 100%;
 }
 
 .search-form p {
@@ -132,10 +143,9 @@ nav a {
 
 .gig {
   border: 3px solid #ca6702;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  width: 95vw;
+  padding-left: 10px;
+  margin: 10px 0px 10px 0;
 }
 
 

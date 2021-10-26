@@ -29,6 +29,11 @@ const ShowGig = ({ toggleFetch, setToggleFetch }) => {
     getGigData();
   }, [toggleFetch])
 
+  const initMap = () => {
+    
+  }
+
+
   return (
     <div>
       <Search 
@@ -39,7 +44,11 @@ const ShowGig = ({ toggleFetch, setToggleFetch }) => {
         setToggleShowMap={setToggleShowMap}
       />
 
-      {toggleShowMap ? "showmap" : "noshowmap"}
+      { toggleShowMap ? 
+        <div className="map">
+
+        </div>
+      : "" }
 
       {searchGigs.map((gig) => (
         <Gig
