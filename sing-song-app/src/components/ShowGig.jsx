@@ -30,7 +30,11 @@ const ShowGig = ({ toggleFetch, setToggleFetch }) => {
       <Search 
         gigs={gigs}
         setSearchGigs={setSearchGigs}
+        toggleFetch={toggleFetch}
+        setToggleFetch={setToggleFetch}
       />
+
+      {searchedGigs ? }
 
       {searchGigs.map((gig) => (
         <Gig

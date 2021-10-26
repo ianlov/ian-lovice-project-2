@@ -13,10 +13,12 @@ body {
   color: #001219
 }
 
-h1 {
-  margin: 0;
+h1, p {
+  margin-top: 0px;
+  margin-bottom: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
   padding: 0;
-
 }
 
 input[type="text"], input[type="search"], input[type="date"] {
@@ -48,13 +50,20 @@ nav a {
 
 /* Home */
 
+.home-links {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  margin-left: 6px;
+}
+
 .title {
   background-image: url(./images/performance.png);
   background-size: cover;
 }
 
 .title h1 {
-  text-shadow: white;
+  text-shadow: 0px 0px 5px white;
 }
 
 /* Post Gig */
@@ -73,6 +82,8 @@ nav a {
 .post-form form {
   display: flex;
   flex-flow: column nowrap;
+  width: 70vw;
+  max-width: 250px;
 }
 
 .post-form form button {
@@ -89,6 +100,7 @@ nav a {
 
 .search-form {
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
@@ -112,6 +124,10 @@ nav a {
   height: 35px;
 }
 
+.search-form p {
+  align-self: start;
+}
+
 /* Gig */
 
 .gig {
@@ -126,6 +142,7 @@ nav a {
 /* MEDIA QUERY */
 
 @media screen and (min-width: 575px) {
+  
   /* Nav */
 
   nav {
@@ -140,8 +157,14 @@ nav a {
 
   .title {
     height: 30vh;
+    display: flex;
+    align-items: end;
   }
 
-  .title h1 {
+  /* Post Gig */
+
+  .post-form {
+    margin-top: 20vh;
   }
+
 }
