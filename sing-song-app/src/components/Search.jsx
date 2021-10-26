@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Search = ({ gigs, setSearchGigs, setToggleFetch, toggleFetch }) => {
+const Search = ({ gigs, setSearchGigs, setToggleFetch, toggleFetch, setToggleShowMap }) => {
   const [search, setSearch] = useState("");
   const [toggleFocus, setToggleFocus] = useState(false)
 
@@ -8,6 +8,8 @@ const Search = ({ gigs, setSearchGigs, setToggleFetch, toggleFetch }) => {
     ev.preventDefault();
     
     setToggleFetch(!toggleFetch)
+
+    setToggleShowMap(true)
 
     const searchLowerCase = search.toLowerCase()
 

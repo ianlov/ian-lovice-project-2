@@ -14,7 +14,11 @@ const API_URL = `https://api.airtable.com/v0/app6U7NfwIM8GmQ47/Table%201?api_key
 const ShowGig = ({ toggleFetch, setToggleFetch }) => {
   const [gigs, setGigs] = useState([]);
   const [searchGigs, setSearchGigs] = useState([]);
+  const [toggleShowMap, setToggleShowMap] = useState(false)
 
+  useEffect(() => {
+    setToggleShowMap(false)
+  }, [])
 
   useEffect(() => {
     const getGigData = async () => {
@@ -32,9 +36,10 @@ const ShowGig = ({ toggleFetch, setToggleFetch }) => {
         setSearchGigs={setSearchGigs}
         toggleFetch={toggleFetch}
         setToggleFetch={setToggleFetch}
+        setToggleShowMap={setToggleShowMap}
       />
 
-      {searchGigs!==[] ? "showmap" : ""}
+      {toggleShowMap ? "showmap" : "noshowmap"}
 
       {searchGigs.map((gig) => (
         <Gig
