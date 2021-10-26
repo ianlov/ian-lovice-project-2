@@ -34,7 +34,7 @@ const ShowGig = ({ toggleFetch, setToggleFetch }) => {
         setToggleFetch={setToggleFetch}
       />
 
-      {searchedGigs ? }
+      {searchGigs!==[] ? "showmap" : ""}
 
       {searchGigs.map((gig) => (
         <Gig
