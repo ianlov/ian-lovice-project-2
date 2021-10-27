@@ -1,33 +1,32 @@
 import axios from "axios"
+import { useState } from "react";
 
 
 const API_KEY = "keyLH1D8HDodG0Om3";
-const API_URL = `https://api.airtable.com/v0/app6U7NfwIM8GmQ47/Table%201?api_key=${API_KEY}`
+const API_URL_PATCH = `https://api.airtable.com/v0/app6U7NfwIM8GmQ47/Table%201`
 
 
 const Gig = ({ gig, toggleFetch, setToggleFetch }) => {
+  let [likes, setLikes] = useState(gig.fields.likes)
+
   const addLike = async () => {
-    let likes = gig.fields.likes;
-    likes++
+    setLikes(likes++)
+    console.log(likes)
 
     const addLike = {
-      records: [
+      "records": [
         {
-          id: gig.id,
-          fields: {
-            artist: gig.fields.artist,
-            address: gig.fields.address,
-            date: gig.fields.date,
-            link: gig.fields.link,
-            time: gig.fields.time,
-            city: gig.fields.city,
-            Likes: likes
+          "fields": {
+            "likes": likes
           }
         }
       ]
     }
 
-    await axios.put(API_URL, addLike)
+    console.log(addLike)
+    
+    
+    await axios.patch(`${API_URL_PATCH}/${gig.id}?api_key=${API_KEY}`, addLike)
 
     setToggleFetch(!toggleFetch);
   }
