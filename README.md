@@ -75,7 +75,7 @@ This API was made using [AirTable](https://airtable.com/). The following is the 
 - [x] Have at least 6 separate, rendered components
 - [x] Use Axios to consume data from Airtable, and GET/render that data in your components
 - [x] Use Axios to POST/create new data on Airtable
-- [ ] Use only React for DOM Manipulation
+- [x] Use only React for DOM Manipulation
 - [x] Use "Mobile First" principles to dynamically style web app
 - [x] Display gigs after search (based on location, date, and artist)
 - [x] Post gigs using a form
