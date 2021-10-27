@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
 
 import Gig from "./Gig.jsx";
 import Search from "./Search.jsx";
@@ -31,16 +30,6 @@ const ShowGig = ({ toggleFetch, setToggleFetch }) => {
     getGigData();
   }, [toggleFetch])
 
-  const initMap = () => {
-    map = new google.maps.Map(document.getElementsByClassName("map"), {
-      center: {
-        lat: -34.3967,
-        lng: 150.644
-      },
-      zoom: 8
-    });
-  }
-
 
   return (
     <div>
@@ -53,9 +42,7 @@ const ShowGig = ({ toggleFetch, setToggleFetch }) => {
       />
 
       { toggleShowMap ? 
-        <div className="map">
-
-        </div>
+        <Map />
       : "" }
 
       {searchGigs.map((gig) => (
