@@ -18,7 +18,7 @@ const Search = ({ gigs, setSearchGigs, setToggleFetch, toggleFetch, setToggleSho
         gig.fields.artist.toLowerCase().includes(searchLowerCase) || 
         gig.fields.city.toLowerCase().includes(searchLowerCase) || 
         gig.fields.date.toLowerCase().includes(searchLowerCase)
-        ) { return gig }
+        ) { return gig } else { return null }
     })
   
     setSearchGigs(searchedGigs)
