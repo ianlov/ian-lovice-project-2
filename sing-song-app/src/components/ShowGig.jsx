@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Wrapper, Status } from "@googlemaps/react-wrapper";
 
 import Gig from "./Gig.jsx";
-import Search from "./Search.jsx"
+import Search from "./Search.jsx";
+import Map from "./Map.jsx";
 
 
 
