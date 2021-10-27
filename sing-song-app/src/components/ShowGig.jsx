@@ -1,10 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-// import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import { Wrapper, Status } from "@googlemaps/react-wrapper";
 
 import Gig from "./Gig.jsx";
 import Search from "./Search.jsx";
-// import Map from "./Map.jsx";
+import Map from "./Map.jsx";
 
 
 
@@ -33,9 +33,9 @@ const ShowGig = ({ toggleFetch, setToggleFetch }) => {
     getGigData();
   }, [toggleFetch])
 
-  // const render = (status: Status) => {
-  //   return <h1>{Status}</h1>
-  // }
+  const render = (status: Status) => {
+    return <h1>{Status}</h1>
+  }
 
   return (
     <div>
@@ -48,11 +48,11 @@ const ShowGig = ({ toggleFetch, setToggleFetch }) => {
       />
 
       { toggleShowMap ? 
-        // <Wrapper apiKey={"AIzaSyAZjycaiqkqixrYvRQhKXPJDi_4UhhmrhQ"} render={render} >
-        //   <Map />
-        // </Wrapper>
-        "showmap"
-      : "" }
+        <Wrapper apiKey={"AIzaSyAZjycaiqkqixrYvRQhKXPJDi_4UhhmrhQ"} render={render} >
+          <Map />
+        </Wrapper>
+        : "" 
+      }
 
       {searchGigs.map((gig) => (
         <Gig
