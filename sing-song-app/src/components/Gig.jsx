@@ -1,32 +1,37 @@
 import axios from "axios"
 import { useState } from "react";
+import { useParams } from "react-router";
 
 
 const API_KEY = "keyLH1D8HDodG0Om3";
-const API_URL_PATCH = `https://api.airtable.com/v0/app6U7NfwIM8GmQ47/Table%201`
-
+const API_URL = `https://api.airtable.com/v0/app6U7NfwIM8GmQ47/Table%201?api_key=${API_KEY}`
 
 const Gig = ({ gig, toggleFetch, setToggleFetch }) => {
-  let [likes, setLikes] = useState(gig.fields.likes)
+  const [likeCount, setLikeCount] = useState(Math.floor(gig.fields.likes))
+  const [pageCount, setPageCount] = useState(0)
 
   const addLike = async () => {
-    setLikes(likes++)
-    console.log(likes)
+    setLikeCount(likeCount + 1)
+    setPageCount(1)
 
-    const addLike = {
+    const addLikeObj = {
       "records": [
         {
+          "id": gig.id,
           "fields": {
-            "likes": likes
+            "artist": gig.fields.artist,
+            "address": gig.fields.address,
+            "date": gig.fields.date,
+            "link": gig.fields.link,
+            "time": gig.fields.time,
+            "city": gig.fields.city,
+            "likes": likeCount,
           }
         }
       ]
     }
-
-    console.log(addLike)
     
-    
-    await axios.patch(`${API_URL_PATCH}/${gig.id}?api_key=${API_KEY}`, addLike)
+    await axios.put(API_URL, addLikeObj)
 
     setToggleFetch(!toggleFetch);
   }
@@ -38,9 +43,7 @@ const Gig = ({ gig, toggleFetch, setToggleFetch }) => {
       <h5>{gig.fields.time}</h5>
       <h5>{gig.fields.address}</h5>
       <h5><a href={gig.fields.link} >Listen</a></h5>
-      <button
-        onClick={addLike}
-      >{gig.fields.likes} will be there</button>
+      <button onClick={addLike} >{gig.fields.likes + pageCount} will be there</button>
     </div>
   )
 }

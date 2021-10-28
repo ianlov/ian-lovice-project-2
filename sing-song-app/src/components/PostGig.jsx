@@ -25,6 +25,7 @@ const PostGig = ({ toggleFetch, setToggleFetch}) => {
             "link": postLink,
             "time": postTime,
             "city": postCity,
+            "likes": 0,
           }
         }
       ]

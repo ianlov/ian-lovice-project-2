@@ -147,9 +147,30 @@ nav a {
 
 .gig {
   border: 3px solid #ca6702;
-  width: 95vw;
+  height: 300px;
+  width: 50vw;
+  min-width: 300px;
   padding-left: 10px;
-  margin: 10px 0px 10px 0;
+  margin: 10px auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.gig h5, .gig button {
+  margin-top: 0;
+}
+
+.gig button {
+  width: fit-content;
+}
+
+.gig button {
+  background-color: #005f73;
+  color: #ee9b00;
+  font-family: 'Space Mono', monospace;
+  border: 1px solid #001219;
+  
 }
 
 
