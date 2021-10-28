@@ -7,13 +7,12 @@ const API_URL = `https://api.airtable.com/v0/app6U7NfwIM8GmQ47/Table%201?api_key
 
 const Gig = ({ gig, toggleFetch, setToggleFetch }) => {
   const [likeCount, setLikeCount] = useState(Math.floor(gig.fields.likes))
-  const [pageCount, setPageCount] = useState(0)
   const [clicked, setClicked] = useState(false)
 
-  const addLike = () => {
-    if (!clicked) {
+  const addLike = async () => {
+    if (!clicked || clicked) {
       setLikeCount(likeCount + 1)
-      setPageCount(1)
+
       const putLike = async () => {
         const addLikeObj = {
           "records": [
@@ -31,9 +30,7 @@ const Gig = ({ gig, toggleFetch, setToggleFetch }) => {
             }
           ]
         }
-
         await axios.put(API_URL, addLikeObj)
-        setToggleFetch(!toggleFetch);
 
       }
       putLike();
@@ -53,7 +50,7 @@ const Gig = ({ gig, toggleFetch, setToggleFetch }) => {
       <h5>{gig.fields.time}</h5>
       <h5>{gig.fields.address}</h5>
       <h5><a href={gig.fields.link} >Listen</a></h5>
-      <button onClick={addLike} >{gig.fields.likes + pageCount} will be there</button>
+      <button onClick={addLike} >{clicked ? "Thanks!" : `${gig.fields.likes} will be there`}</button>
     </div>
   )
 }
