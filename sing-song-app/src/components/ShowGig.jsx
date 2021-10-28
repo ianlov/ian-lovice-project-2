@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import Gig from "./Gig.jsx";
 import Search from "./Search.jsx";
-import MapRender from "./MapRender.jsx";
+// import MapRender from "./MapRender.jsx";
 
 
 
