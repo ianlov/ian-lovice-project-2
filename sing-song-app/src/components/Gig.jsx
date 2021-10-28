@@ -1,6 +1,5 @@
 import axios from "axios"
 import { useState } from "react";
-import { useParams } from "react-router";
 
 
 const API_KEY = "keyLH1D8HDodG0Om3";
@@ -9,31 +8,42 @@ const API_URL = `https://api.airtable.com/v0/app6U7NfwIM8GmQ47/Table%201?api_key
 const Gig = ({ gig, toggleFetch, setToggleFetch }) => {
   const [likeCount, setLikeCount] = useState(Math.floor(gig.fields.likes))
   const [pageCount, setPageCount] = useState(0)
+  const [clicked, setClicked] = useState(false)
 
-  const addLike = async () => {
-    setLikeCount(likeCount + 1)
-    setPageCount(1)
-
-    const addLikeObj = {
-      "records": [
-        {
-          "id": gig.id,
-          "fields": {
-            "artist": gig.fields.artist,
-            "address": gig.fields.address,
-            "date": gig.fields.date,
-            "link": gig.fields.link,
-            "time": gig.fields.time,
-            "city": gig.fields.city,
-            "likes": likeCount,
-          }
+  const addLike = () => {
+    if (!clicked) {
+      setLikeCount(likeCount + 1)
+      setPageCount(1)
+      const putLike = async () => {
+        const addLikeObj = {
+          "records": [
+            {
+              "id": gig.id,
+              "fields": {
+                "artist": gig.fields.artist,
+                "address": gig.fields.address,
+                "date": gig.fields.date,
+                "link": gig.fields.link,
+                "time": gig.fields.time,
+                "city": gig.fields.city,
+                "likes": likeCount,
+              }
+            }
+          ]
         }
-      ]
-    }
-    
-    await axios.put(API_URL, addLikeObj)
 
-    setToggleFetch(!toggleFetch);
+        await axios.put(API_URL, addLikeObj)
+        setToggleFetch(!toggleFetch);
+
+      }
+      putLike();
+      setClicked(true)
+
+    } else {
+      console.log("already clicked")
+    }
+
+
   }
 
   return (
