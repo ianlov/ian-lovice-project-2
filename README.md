@@ -96,7 +96,7 @@ This API was made using [AirTable](https://airtable.com/). The following is the 
 |Sun Oct 24| | |
 |Mon Oct 25| GET / POST / Styling | Complete
 |Tue Oct 26| Styling | Complete
-|Wed Oct 27| MVP complete / Google Maps PMVP | Incomplete
+|Wed Oct 27| MVP complete / Google Maps PMVP | Complete
 |Thu Oct 28| Likes PMVP | Incomplete
 |Fri Oct 29| Present | Incomplete
 
