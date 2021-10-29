@@ -25,75 +25,7 @@ const Gig = ({ gig }) => {
     ]
   });
 
-  // const addLike = () => {
-  //   if (!clicked || clicked) {
-  //     setLikeCount(likeCount + 1)
-  //     const addLikeObj = {
-  //       "records": [
-  //         {
-  //           "id": gig.id,
-  //           "fields": {
-  //             "artist": gig.fields.artist,
-  //             "address": gig.fields.address,
-  //             "date": gig.fields.date,
-  //             "link": gig.fields.link,
-  //             "time": gig.fields.time,
-  //             "city": gig.fields.city,
-  //             "likes": likeCount,
-  //           }
-  //         }
-  //       ]
-  //     }
 
-
-  //     const putLike = async () => {
-  //       if (!clicked) {
-  //         await axios.put(API_URL, addLikeObj)
-  //       }
-  //     }
-  //     putLike();
-  //     setClicked(true)
-
-  //   } else {
-  //     console.log("already clicked")
-  //   }
-
-
-  // }
-
-  const addLike = () => {
-    if (!clicked) {
-      setLikeCount(gig.fields.likes + 1);
-
-      setLikeObj({
-        records: [
-          {
-            id: gig.id,
-            fields: {
-              artist: gig.fields.artist,
-              address: gig.fields.address,
-              date: gig.fields.date,
-              link: gig.fields.link,
-              time: gig.fields.time,
-              city: gig.fields.city,
-              likes: likeCount
-            }
-          }
-        ]
-      })
-
-      setClicked(true)
-    } else {
-      console.log("already clicked")
-    }
-  }
-
-  useEffect(() => {
-    const putData = async () => {
-      await axios.put(API_URL, likeObj)
-    }
-    putData();
-  }, [setLikeCount, likeObj])
   
 
   return (
