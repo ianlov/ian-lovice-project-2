@@ -70,6 +70,13 @@ nav a {
   text-shadow: 0px 0px 5px white;
 }
 
+/* About */
+
+.social-icon {
+  height: 40px;
+  width: auto;
+}
+
 /* Post Gig */
 
 .post-form {
